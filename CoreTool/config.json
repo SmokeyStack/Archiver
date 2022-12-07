@@ -1,248 +1,71 @@
 {
-  "GitSync": {
-    "Enabled": false,
-    "Repo": "https://github.com/MinecraftBedrockArchiver/Metadata",
-    "Folder": ".\\GitSync\\"
-  },
-  "Archives": [
-    {
-      "Name": "W10",
-      "Directory": ".\\Windows10 - Microsoft.MinecraftUWP_8wekyb3d8bbwe\\",
-      "Loaders": [
-        {
-          "Class": "CoreTool.Loaders.FileLoader"
-        },
-        {
-          "Class": "CoreTool.Loaders.Windows.VersionDBLoader",
-          "Params": [
-            "Microsoft.MinecraftUWP"
-          ]
-        },
-        {
-          "Class": "CoreTool.Loaders.Windows.StoreLoader",
-          "Params": [
-            "9NBLGGH2JHXJ",
-            "Microsoft.MinecraftUWP"
-          ]
-        }
-      ],
-      "Checkers": [
-        {
-          "Class": "CoreTool.Checkers.MetaChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.Windows.FileChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.HashChecker"
-        }
-      ]
-    },
-    {
-      "Name": "Xbox",
-      "Directory": ".\\Xbox - Microsoft.MinecraftUWPConsole_8wekyb3d8bbwe\\",
-      "Loaders": [
-        {
-          "Class": "CoreTool.Loaders.FileLoader"
-        },
-        {
-          "Class": "CoreTool.Loaders.Windows.StoreLoader",
-          "Params": [
-            "9NBLGGH537BL",
-            "Microsoft.MinecraftUWPConsole"
-          ]
-        }
-      ],
-      "Checkers": [
-        {
-          "Class": "CoreTool.Checkers.MetaChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.Windows.FileChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.HashChecker"
-        }
-      ]
-    },
-    {
-      "Name": "Xbox Preview",
-      "Directory": ".\\Xbox - Microsoft.MinecraftUWPBeta_8wekyb3d8bbwe\\",
-      "Loaders": [
-        {
-          "Class": "CoreTool.Loaders.FileLoader"
-        },
-        {
-          "Class": "CoreTool.Loaders.Windows.StoreLoader",
-          "Params": [
-            "9MTK992XRFL2",
-            "Microsoft.MinecraftUWPBeta",
-            true,
-            true,
-            "service::www.microsoft.com::mbi_ssl"
-          ]
-        }
-      ],
-      "Checkers": [
-        {
-          "Class": "CoreTool.Checkers.MetaChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.Windows.FileChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.HashChecker"
-        }
-      ]
-    },
-    {
-      "Name": "W10 Preview",
-      "Directory": ".\\Windows10 - Microsoft.MinecraftWindowsBeta_8wekyb3d8bbwe\\",
-      "Loaders": [
-        {
-          "Class": "CoreTool.Loaders.FileLoader"
-        },
-        {
-          "Class": "CoreTool.Loaders.Windows.VersionDBLoader",
-          "Params": [
-            "Microsoft.MinecraftWindowsBeta"
-          ]
-        },
-        {
-          "Class": "CoreTool.Loaders.Windows.StoreLoader",
-          "Params": [
-            "9P5X4QVLC2XR",
-            "Microsoft.MinecraftWindowsBeta",
-            false
-          ]
-        }
-      ],
-      "Checkers": [
-        {
-          "Class": "CoreTool.Checkers.MetaChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.Windows.FileChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.HashChecker"
-        }
-      ]
-    },
-    {
-      "Name": "Edu",
-      "Directory": ".\\Windows10 - Microsoft.MinecraftEducationEdition_8wekyb3d8bbwe\\",
-      "Loaders": [
-        {
-          "Class": "CoreTool.Loaders.FileLoader",
-          "Params": [
-            "appx",
-            "appxbundle"
-          ]
-        },
-        {
-          "Class": "CoreTool.Loaders.Windows.StoreLoader",
-          "Params": [
-            "9NBLGGH4R2R6",
-            "Microsoft.MinecraftEducationEdition",
-            false
-          ]
-        }
-      ],
-      "Checkers": [
-        {
-          "Class": "CoreTool.Checkers.MetaChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.Windows.FileChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.HashChecker"
-        }
-      ]
-    },
-    {
-      "Name": "Android-PE",
-      "Directory": ".\\Android - com.mojang.minecraftpe\\",
-      "Loaders": [
-        {
-          "Class": "CoreTool.Loaders.FileLoader",
-          "Params": [
-            "apk"
-          ]
-        },
-        {
-          "Class": "CoreTool.Loaders.Android.VersionDBLoader"
-        }
-      ],
-      "Checkers": [
-        {
-          "Class": "CoreTool.Checkers.MetaChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.Android.FileChecker",
-          "Params": [
-            "com.mojang.minecraftpe",
-            "arm64-v8a",
-            "violet-arm64-v8a.properties"
-          ]
-        },
-        {
-          "Class": "CoreTool.Checkers.Android.FileChecker",
-          "Params": [
-            "com.mojang.minecraftpe",
-            "armeabi-v7a",
-            "violet-armeabi-v7a.properties"
-          ]
-        },
-        {
-          "Class": "CoreTool.Checkers.Android.FileChecker",
-          "Params": [
-            "com.mojang.minecraftpe",
-            "x86",
-            "cloudbook-x86.properties"
-          ]
-        },
-        {
-          "Class": "CoreTool.Checkers.Android.FileChecker",
-          "Params": [
-            "com.mojang.minecraftpe",
-            "x86_64",
-            "cloudbook-x86_64.properties"
-          ]
-        },
-        {
-          "Class": "CoreTool.Checkers.HashChecker"
-        }
-      ]
-    },
-    {
-      "Name": "Android-Edu",
-      "Directory": ".\\Android - com.mojang.minecraftedu\\",
-      "Loaders": [
-        {
-          "Class": "CoreTool.Loaders.FileLoader",
-          "Params": [
-            "apk"
-          ]
-        }
-      ],
-      "Checkers": [
-        {
-          "Class": "CoreTool.Checkers.MetaChecker"
-        },
-        {
-          "Class": "CoreTool.Checkers.Android.FileChecker",
-          "Params": [
-            "com.mojang.minecraftedu",
-            "x86_64",
-            "octopus.properties"
-          ]
-        },
-        {
-          "Class": "CoreTool.Checkers.HashChecker"
-        }
-      ]
-    }
-  ]
+	"GitSync": {
+		"Enabled": false,
+		"Repo": "https://github.com/MinecraftBedrockArchiver/Metadata",
+		"Folder": ".\\GitSync\\"
+	},
+	"Archives": [{
+			"Name": "W10",
+			"Directory": ".\\Windows10 - Microsoft.MinecraftUWP_8wekyb3d8bbwe\\",
+			"Loaders": [{
+					"Class": "CoreTool.Loaders.FileLoader"
+				},
+				{
+					"Class": "CoreTool.Loaders.Windows.VersionDBLoader",
+					"Params": [
+						"Microsoft.MinecraftUWP"
+					]
+				},
+				{
+					"Class": "CoreTool.Loaders.Windows.StoreLoader",
+					"Params": [
+						"9NBLGGH2JHXJ",
+						"Microsoft.MinecraftUWP"
+					]
+				}
+			],
+			"Checkers": [{
+					"Class": "CoreTool.Checkers.MetaChecker"
+				},
+				{
+					"Class": "CoreTool.Checkers.Windows.FileChecker"
+				},
+				{
+					"Class": "CoreTool.Checkers.HashChecker"
+				}
+			]
+		},
+		{
+			"Name": "W10 Preview",
+			"Directory": ".\\Windows10 - Microsoft.MinecraftWindowsBeta_8wekyb3d8bbwe\\",
+			"Loaders": [{
+					"Class": "CoreTool.Loaders.FileLoader"
+				},
+				{
+					"Class": "CoreTool.Loaders.Windows.VersionDBLoader",
+					"Params": [
+						"Microsoft.MinecraftWindowsBeta"
+					]
+				},
+				{
+					"Class": "CoreTool.Loaders.Windows.StoreLoader",
+					"Params": [
+						"9P5X4QVLC2XR",
+						"Microsoft.MinecraftWindowsBeta",
+						false
+					]
+				}
+			],
+			"Checkers": [{
+					"Class": "CoreTool.Checkers.MetaChecker"
+				},
+				{
+					"Class": "CoreTool.Checkers.Windows.FileChecker"
+				},
+				{
+					"Class": "CoreTool.Checkers.HashChecker"
+				}
+			]
+		}
+	]
 }
